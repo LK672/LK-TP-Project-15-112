@@ -1,0 +1,153 @@
+PROJECT DESCRIPTION
+
+This is the project proposal for SPELLTASTROPHE
+
+This will be a round based third person survival game in a pixelated 2D environment.
+The player will play as a combat-wizard character with primarily a lofty arsenal
+of differnet spells and spell types to choose from. Some of the types include
+damage, healing, and curses. Certain spells will synergize well with others and other
+spells will have combo options that can be discovered through play. Between survival rounds,
+the player will be able to explore the world to collect resources to improve their
+abilities back at the main base. Rounds will be in increasing difficulty with new conditions and enemy types added to make a more engaging challenge. The objective of the game is to survive through
+all rounds.
+
+
+
+SIMILAR PROJECTS
+
+In this project I draw inspiration from games such as Blasphemous, the Souls Series, PVZ
+and BTD5.
+
+Blasphemous's beautiful art style is what most interest me. I want implement the same dynamic
+sprite animiations that the game has which may seem like a minor detail but to me add a lot
+to the gameplay. This will allow alot of my creative ideas to pop out more in the game. Additionally,
+the way the art is designed gives a very grim atmosphere to the game which I really enjoy.
+Especially in my game setting of post-apocalyptic survival, I think this would be especially fitting.
+The Souls Series (i.e. Dark Souls 3) comes in with inspiration in terms of high-level design and
+story details. Treating each survival round like a level, I want to implement the uniqueness and
+freshness that each level in DS3 often has, with enemy themes, and memorable bosses. Additionally,
+making the experience quite challenging (in just the right way) will make each victory feel far more
+rewarding and promote the player to try new things. In story terms, I want to use the design of limited
+story feeding so that the player can learn more themselves. The opening cinematic will give a short context blurb, and the rest is up to the player to learn if they so choose.
+
+PVZ (Plants versus Zombies) and BTD5 (Balloon Tower Defense 5) are definitely mechanically inspirational.
+PVZ has a direct usage of the round system that I would like to use, the difference being the experience outside of the survival round is still active. The idea of having specific game elements the player can use to counter specific enemy types is something I want to implement. Also, the base will be somewhat similar to the idea of the house in PVZ, as I feel there should be more at stake than solely the player themselves. Thus, I will make the base integral to the survivial of the player, but not so much to the point where the fates of the two are tied together (i.e. base falls, so immediately player falls). In BTD5, this deals with the enemy types and upgrade mechanic in the game. I would like in SPELLTASTROPHE to emphasize the importance of maintaining base upgrades throughout the course of the game. While the upgrades will mostly focus on the player character, there will be a tree of options that forces players to go down certain paths of uprgrades and increase diversity in playstyles between playthroughs.
+
+
+
+STRUCTURAL PLAN
+
+Classes:
+    Player Character (PC)
+        Health
+        Mana
+        Movement 
+            WASD
+            Dash
+            Portals
+        Actions (Mainly Mouse0 and Mouse1)
+            Attacks
+            Resource Collecting
+            Object/Building Interaction
+            Puzzles
+    PC childs (things created by PC)
+        Skill Tree
+        Weapon/Spell Station
+        Walls/Towers
+    Enemies
+        Subclasses for each type
+        Death Animation
+        Health bar (visible to player)
+        Mana bar (invisible to player)
+    Resources
+        Gold
+        Wood
+        Stone
+        Precious Gems
+        Magical/Elemental materials
+        Usable items (i.e. a new weapon)
+    Other Environment Interactables
+        Portal Gates
+        Collectibles
+    NPCs
+        Merchant
+        Cathedral Dweller
+
+Functions:
+    Animations 
+        death animations
+        spell casting animations
+        character movement estimations
+    Map Generation
+    Round Generation
+    Scripted Events
+    Update Upgrades/Buildings
+
+
+
+ALGORITHMIC PLAN
+
+The two trickiest aspects of the game will likely be the map generation and gameAI.
+For the map generation, I plan to use the perlin noise to create 'realistic' randomness
+in map generation. This will allow the world exploration to feel fresh and worthwhile
+each time the player ventures out. However, this procedural generation needs to meet 
+a few requirements such as having certain resources. On the gameAI side, this will be
+difficult as many enemies require vastly different AI. This will be simple early on
+with fairly easy to design enemies, but as the game progresses, the complexity will
+drastically increase. This will probably involve using expectimax and monte carlo methods
+since the game states of the game will be quite open.
+
+
+
+TIMELINE PLAN
+
+By TP0:
+    Outline all game features and elements outside of code
+    Implement core algorithmic features such as map generation
+    Create base movement for character (maybe few enemies)
+    Prepare ideas for skill tree and upgrades
+    Define some story elements
+By TP1:
+    A majority of the enemy profiles should be completed
+    One working survival round would be nice
+    Functioning resource collection and upgrading (limited for now)
+    Map generation working with character movement
+    Story complete
+By TP2:
+    5 survival rounds varied between time limit and enemy limit
+    Mostly fully working player character
+    Substantial enemy profiles completed
+    All Map movement such as portals completed
+    Some Music implementation
+By TP3:
+    # of Rounds TBD
+    All enemy profiles
+    Polished animations and UI
+    Full skill trees and upgrades
+    Interesting game dynamics and challenges
+    Extra content (puzzles and NPCs)
+    Full music score implementaion
+
+
+
+VERSION CONTROL PLAN
+
+I will be using my GitHub Desktop account to save all my code. Each time I update
+my code I will copy my code into a new commit that will be saved into the github main branch.
+This way I will have nearly every version of the code saved so I can go back to a previous
+version if need be. This GitHub repository will also include the rest of the design
+and documentation seperated into various sections so that every part of the project is
+backed up. Additionally, this will keep a common place where all my work on the project has
+been done for the project. 
+
+
+
+MODULE LIST
+
+For now, I will not be using any external modules (I am getting rid of PyDub). Later
+down the line, I may opt to import things for animations and audio design.
+
+
+
+
+
